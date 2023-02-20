@@ -7,6 +7,8 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use('wbthomason/packer.nvim')
 
+  use('whoissethdaniel/toggle-lsp-diagnostics.nvim')
+
   use 'andweeb/presence.nvim'
   use({
 	  'nvim-telescope/telescope.nvim', tag = '0.1.0',

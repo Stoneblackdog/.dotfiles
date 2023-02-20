@@ -185,6 +185,11 @@ _G.packer_plugins = {
     path = "/home/stoneblackdog/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["toggle-lsp-diagnostics.nvim"] = {
+    loaded = true,
+    path = "/home/stoneblackdog/.local/share/nvim/site/pack/packer/start/toggle-lsp-diagnostics.nvim",
+    url = "https://github.com/whoissethdaniel/toggle-lsp-diagnostics.nvim"
+  },
   undotree = {
     loaded = true,
     path = "/home/stoneblackdog/.local/share/nvim/site/pack/packer/start/undotree",
