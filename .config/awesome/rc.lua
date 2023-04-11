@@ -813,5 +813,9 @@ tag.connect_signal("property::layout", function(t)
         end
     end
 end)
-
-gears.timer.start_new(1, function() collectgarbage("step", 20000) return true end)
+-- Run garbage collector regularly to prevent memory leaks
+gears.timer {
+       timeout = 30,
+       autostart = true,
+       callback = function() collectgarbage() end
+}
