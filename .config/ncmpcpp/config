@@ -85,13 +85,6 @@ visualizer_output_name = Visualizer feed
 visualizer_in_stereo = yes
 #
 ##
-## Note: set below to >=10 only if you have synchronization issues with
-## visualization and audio.
-##
-#
-visualizer_sync_interval = 1
-#
-##
 ## Note: To enable spectrum frequency visualization you need to compile ncmpcpp
 ## with fftw3 support.
 ##
