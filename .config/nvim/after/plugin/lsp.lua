@@ -6,17 +6,6 @@ lsp.ensure_installed({
     'pylsp',
     'rust_analyzer'
 })
-
-lsp.configure('lua-language-server', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
-
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
 lsp.on_attach(function(client, bufnr)
