@@ -654,6 +654,7 @@ awful.rules.rules = {
           "pinentry",
         },
         class = {
+          "steam_app_1692250", -- F1 22
           "Arandr",
           "Blueman-manager",
           "Gpick",

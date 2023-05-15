@@ -1,9 +1,9 @@
-sw_volume: 80
+sw_volume: 100
 audio_device_state:1:PipeWire Sound Server
 audio_device_state:1:Visualizer feed
 state: stop
-current: 0
-random: 1
+current: 29
+random: 0
 repeat: 0
 single: 0
 consume: 0
@@ -25,4 +25,20 @@ playlist_begin
 11:Mick Gordon - BFG Division.mp3
 12:Mick Gordon - Hellwalker.mp3
 13:Carpenter Brut - Invasion A.D.mp3
+14:Turing Complete Soundtrack/Adding Bytes.mp3
+15:Turing Complete Soundtrack/Component Factory.mp3
+16:Turing Complete Soundtrack/Conditionals.mp3
+17:Turing Complete Soundtrack/Delay.mp3
+18:Turing Complete Soundtrack/Immediate Values.mp3
+19:Turing Complete Soundtrack/Instruction Decoder.mp3
+20:Turing Complete Soundtrack/Logic Engine.mp3
+21:Turing Complete Soundtrack/Masking Time.mp3
+22:Turing Complete Soundtrack/NAND Gate.mp3
+23:Turing Complete Soundtrack/Robot Racing.mp3
+24:Turing Complete Soundtrack/Saving Gracefully.mp3
+25:Turing Complete Soundtrack/The Maze.mp3
+26:Turing Complete Soundtrack/Tower of Alloy.mp3
+27:Turing Complete Soundtrack/Turing Complete.mp3
+28:Turing Complete Soundtrack/Wide Instructions.mp3
+29:Turing Complete Soundtrack/Wire Spaghetti.mp3
 playlist_end
