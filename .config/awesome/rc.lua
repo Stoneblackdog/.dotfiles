@@ -655,6 +655,7 @@ awful.rules.rules = {
         },
         class = {
           "steam_app_1692250", -- F1 22
+          "steam_app_250900", -- Binding of Isaac: Rebirth
           "Arandr",
           "Blueman-manager",
           "Gpick",
