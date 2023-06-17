@@ -18,15 +18,15 @@ return require('packer').startup(function(use)
 
   use({ "ellisonleao/gruvbox.nvim" })
 
+  use {
+      'nvim-lualine/lualine.nvim',
+      requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
+
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/nvim-treesitter-context')
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
-
-  use {
-      'nvim-lualine/lualine.nvim',
-      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
 
   use('mbbill/undotree')
   use('tpope/vim-fugitive')

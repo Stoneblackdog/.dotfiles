@@ -163,7 +163,7 @@ _G.packer_plugins = {
     loaded = false,
     needs_bufread = false,
     path = "/home/stoneblackdog/.local/share/nvim/site/pack/packer/opt/nvim-web-devicons",
-    url = "https://github.com/kyazdani42/nvim-web-devicons"
+    url = "https://github.com/nvim-tree/nvim-web-devicons"
   },
   ["packer.nvim"] = {
     loaded = true,

@@ -684,6 +684,8 @@ awful.rules.rules = {
       properties = { tag = "web" } },
     { rule = { class = "Steam" },
       properties = { tag = "steam" } },
+    { rule = { class = "Steam" },
+      properties = { tag = "steamwebhelper" } },
     { rule = { class = "discord" },
       properties = { tag = "dc" } },
 }
