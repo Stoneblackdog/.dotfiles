@@ -682,10 +682,8 @@ awful.rules.rules = {
     -- Set Firefox to always map on the tag named "2" on screen 1.
     { rule = { class = "firefox" },
       properties = { tag = "web" } },
-    { rule = { class = "Steam" },
+    { rule = { class = "steam" },
       properties = { tag = "steam" } },
-    { rule = { class = "Steam" },
-      properties = { tag = "steamwebhelper" } },
     { rule = { class = "discord" },
       properties = { tag = "dc" } },
 }

@@ -91,7 +91,7 @@ theme.cal = lain.widget.cal({
     attach_to = { mytextclock },
     notification_preset = {
         font = "monospace",
-        fg   = theme.fg_normal,
+        fg   = theme.fg_focus,
         bg   = theme.bg_normal.."dd"
     }
 })
