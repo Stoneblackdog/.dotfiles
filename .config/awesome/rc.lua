@@ -226,9 +226,6 @@ globalkeys = mytable.join(
     awful.key({}, "XF86AudioLowerVolume", function()
         awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ -10%")
     end),
-    -- Destroy all notifications
-    awful.key({ "Control",           }, "space", function() naughty.destroy_all_notifications() end,
-              {description = "destroy all notifications", group = "hotkeys"}),
     -- Take a screenshot
     awful.key({ }, "Print", function() awful.util.spawn("flameshot gui") end,
               {description = "take a screenshot", group = "hotkeys"}),
@@ -616,6 +613,16 @@ clientbuttons = mytable.join(
         awful.mouse.client.resize(c)
     end)
 )
+
+-- Changing spotify notifications.
+
+naughty.config.presets.spotify = { 
+    -- if you want to disable Spotify notifications completely, return false
+    callback = function(args)
+        return false
+    end,
+}
+table.insert(naughty.dbus.config.mapping, {{appname = "Spotify"}, naughty.config.presets.spotify})
 
 -- Set keys
 root.keys(globalkeys)
