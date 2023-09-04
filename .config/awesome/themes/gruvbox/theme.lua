@@ -214,6 +214,8 @@ local memory = lain.widget.mem({
     end
 })
 
+local layout = awful.widget.keyboardlayout:new ()
+
 function theme.at_screen_connect(s)
     -- Quake application
     s.quake = lain.util.quake({ app = awful.util.terminal })
@@ -262,6 +264,7 @@ function theme.at_screen_connect(s)
             layout = wibox.layout.fixed.horizontal,
             --mailicon,
             --theme.mail.widget,
+            layout,
             volicon,
             theme.volume.widget,
             memicon,

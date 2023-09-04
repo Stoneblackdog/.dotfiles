@@ -216,19 +216,32 @@ root.buttons(mytable.join(
 
 -- }}}
 
+layout = "hu"
+
 -- {{{ Key bindings
 
 globalkeys = mytable.join(
     -- Increase / Decrease volume
-    awful.key({}, "XF86AudioRaiseVolume", function()
+    awful.key({ }, "XF86AudioRaiseVolume", function()
         awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ +10%")
     end),
-    awful.key({}, "XF86AudioLowerVolume", function()
+    awful.key({ }, "XF86AudioLowerVolume", function()
         awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ -10%")
     end),
     -- Take a screenshot
     awful.key({ }, "Print", function() awful.util.spawn("flameshot gui") end,
               {description = "take a screenshot", group = "hotkeys"}),
+    -- Change keyboard layout
+    awful.key({ altkey }, "k", function ()
+        if layout == "hu" then
+            layout = "us"
+            awful.spawn("setxkbmap -layout us -variant altgr-intl")
+        else if layout == "us" then
+            layout = "hu"
+            awful.spawn("setxkbmap -layout hu")
+        end
+        end
+    end),
 
     -- X screen locker
     awful.key({ altkey, "Control" }, "l", function () awful.util.spawn("slock") end,
