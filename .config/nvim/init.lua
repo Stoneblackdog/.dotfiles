@@ -1,6 +1,4 @@
 require("stoneblackdog")
-vim.o.background = "dark"
-vim.cmd([[colorscheme gruvbox]])
 vim.cmd [[
     set clipboard+=unnamedplus
 ]]
@@ -9,6 +7,8 @@ vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
 vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
 
 local cmp = require'cmp'
+
+require("luasnip.loaders.from_vscode").lazy_load()
 
 cmp.setup({
     snippet = {

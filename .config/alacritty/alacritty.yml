@@ -19,5 +19,5 @@ font:
 
 window: { opacity: 0.9 }
 
-import:
- - ~/.config/alacritty/themes/gruvbox_dark.yaml
+import: 
+  - ~/.config/alacritty/themes/catppuccin-macchiato.yml

@@ -2,9 +2,9 @@ local lsp = require('lsp-zero')
 
 lsp.preset('recommended')
 lsp.ensure_installed({
-    'clangd',
     'pylsp',
-    'rust_analyzer'
+    'rust_analyzer',
+    'html',
 })
 vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
 
