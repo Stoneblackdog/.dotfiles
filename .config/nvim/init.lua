@@ -1,43 +1,35 @@
-require("stoneblackdog")
-vim.cmd [[
-    set clipboard+=unnamedplus
-]]
+-- Set <space> as the leader key
+--  NOTE: Must happen before plugins are required (otherwise wrong leader will be used)
+vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
 
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+-- [[ Install `lazy.nvim` plugin manager ]]
+require 'lazy-bootstrap'
 
-local cmp = require'cmp'
+-- [[ Configure plugins ]]
+require 'lazy-plugins'
 
-require("luasnip.loaders.from_vscode").lazy_load()
+-- [[ Setting options ]]
+require 'options'
 
-cmp.setup({
-    snippet = {
-        -- REQUIRED - you must specify a snippet engine
-        expand = function(args)
-            -- vim.fn["vsnip#anonymous"](args.body) -- For `vsnip` users.
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-            -- require('snippy').expand_snippet(args.body) -- For `snippy` users.
-            -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
-        end,
-    },
-    window = {
-        completion = cmp.config.window.bordered(),
-        documentation = cmp.config.window.bordered(),
-    },
-    mapping = cmp.mapping.preset.insert({
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
-    }),
-    sources = cmp.config.sources({
-        { name = 'nvim_lsp' },
-        { name = 'vsnip' }, -- For vsnip users.
-        -- { name = 'luasnip' }, -- For luasnip users.
-        -- { name = 'ultisnips' }, -- For ultisnips users.
-        -- { name = 'snippy' }, -- For snippy users.
-    }, {
-            { name = 'buffer' },
-        })
-})
+-- [[ Basic Keymaps ]]
+require 'keymaps'
+
+-- [[ Configure Telescope ]]
+-- (fuzzy finder)
+require 'telescope-setup'
+
+-- [[ Configure Treesitter ]]
+-- (syntax parser for highlighting)
+require 'treesitter-setup'
+
+-- [[ Configure LSP ]]
+-- (Language Server Protocol)
+require 'lsp-setup'
+
+-- [[ Configure nvim-cmp ]]
+-- (completion)
+require 'cmp-setup'
+
+-- The line beneath this is called `modeline`. See `:help modeline`
+-- vim: ts=2 sts=2 sw=2 et

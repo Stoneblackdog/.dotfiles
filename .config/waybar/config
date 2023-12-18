@@ -6,15 +6,15 @@
     // "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": ["pulseaudio", "cpu", "memory", "temperature", "keyboard-state", "sway/language", "battery", "battery#bat2", "clock", "tray"],
+    "modules-center": [],
+    "modules-right": ["pulseaudio", "cpu", "memory", "sway/language", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "active-only": false,
         "disable-scroll": true,
         "all-outputs": true,
         "warp-on-scroll": false,
-        "format": "{name}: {icon}",
+        "format": "{name}",
         "format-icons": {
             "urgent": "",
             "active": "",
@@ -131,7 +131,7 @@
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "scroll-step": 1, // %, can be a float
+        "scroll-step": 10, // %, can be a float
         "format": "{volume}% {icon}",
         "format-icons": {
             "default": ["", "", ""]

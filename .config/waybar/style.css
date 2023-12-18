@@ -80,6 +80,7 @@ button:hover {
 #mpd {
     padding: 0 10px;
     color: #ffffff;
+    border-bottom: 2px solid rgba(110, 115, 141, 0.5);
 }
 
 #window,
