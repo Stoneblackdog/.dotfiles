@@ -5,4 +5,12 @@
 return {
   'theprimeagen/harpoon',
   'mbbill/undotree',
+  {
+    'rust-lang/rust.vim',
+    ft = 'rust',
+    init = function()
+      vim.g.rustfmt_autosave = 1
+    end
+  },
+  'nvim-treesitter/nvim-treesitter-context',
 }
