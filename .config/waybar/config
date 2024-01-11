@@ -7,7 +7,7 @@
     // Choose the order of the modules
     "modules-left": ["hyprland/workspaces", "sway/mode", "sway/scratchpad", "custom/media"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "cpu", "memory", "sway/language", "clock", "tray"],
+    "modules-right": ["pulseaudio", "cpu", "memory", "hyprland/language", "clock", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "active-only": false,

@@ -1,9 +1,15 @@
 -- [[ Configure nvim-cmp ]]
 -- See `:help cmp`
 local cmp = require 'cmp'
+local cmp_autoparis = require('nvim-autopairs.completion.cmp')
 local luasnip = require 'luasnip'
 require('luasnip.loaders.from_vscode').lazy_load()
 luasnip.config.setup {}
+
+cmp.event:on(
+  'confirm_done',
+  cmp_autoparis.on_confirm_done()
+)
 
 cmp.setup {
   snippet = {
@@ -21,7 +27,6 @@ cmp.setup {
     ['<C-f>'] = cmp.mapping.scroll_docs(4),
     ['<C-Space>'] = cmp.mapping.complete {},
     ['<CR>'] = cmp.mapping.confirm {
-      behavior = cmp.ConfirmBehavior.Replace,
       select = true,
     },
     ['<Tab>'] = cmp.mapping(function(fallback)

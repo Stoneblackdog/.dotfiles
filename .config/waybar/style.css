@@ -70,6 +70,7 @@ button:hover {
 #temperature,
 #backlight,
 #network,
+#language,
 #pulseaudio,
 #wireplumber,
 #custom-media,
@@ -79,8 +80,7 @@ button:hover {
 #scratchpad,
 #mpd {
     padding: 0 10px;
-    color: #ffffff;
-    border-bottom: 2px solid rgba(110, 115, 141, 0.5);
+    color: #000000;
 }
 
 #window,
@@ -241,11 +241,8 @@ label:focus {
 }
 
 #language {
-    background: #00b093;
-    color: #740864;
-    padding: 0 5px;
-    margin: 0 5px;
-    min-width: 16px;
+    background: #8bd5ca;
+    min-width: 80px;
 }
 
 #keyboard-state {
