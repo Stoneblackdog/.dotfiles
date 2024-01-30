@@ -7,6 +7,7 @@
 
 export LIBVA_DRIVER_NAME=radeonsi
 export GIT_CEILING_DIRECTORIES=$HOME
+export TERM=wezterm
 alias vim='nvim'
 alias ls='ls -a --color=auto'
 alias grep='grep --color=auto'
