@@ -39,4 +39,6 @@ vim.o.relativenumber = true
 
 vim.o.colorcolumn = "80"
 
+vim.o.guicursor = ''
+
 -- vim: ts=2 sts=2 sw=2 et
