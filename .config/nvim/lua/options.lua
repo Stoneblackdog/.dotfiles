@@ -41,4 +41,7 @@ vim.o.colorcolumn = "80"
 
 vim.o.guicursor = ''
 
+vim.o.undodir = os.getenv('HOME') .. '/.vim/undodir'
+vim.o.undofile = true
+
 -- vim: ts=2 sts=2 sw=2 et

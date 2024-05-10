@@ -77,11 +77,12 @@ local servers = {
   -- pyright = {},
   rust_analyzer = {
     filetypes = { 'rust' },
-    settings = {
-      ['rust-analyzer'] = {
-        cargo = {
-          allFeatures = true,
-        },
+    ['rust-analyzer'] = {
+      cargo = {
+        allFeatures = true,
+      },
+      check = {
+        command = 'clippy',
       },
     },
   },
